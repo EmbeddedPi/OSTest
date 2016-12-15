@@ -15,7 +15,7 @@ public class Main {
 	public static void main() {
 	System.out.println("OSTest is starting");
 	str = checkOS();
-	System.out.println("OS is " +str);
+	System.out.println("OS is " + str);
 	}
 	
 	private static String checkOS() {
