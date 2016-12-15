@@ -38,7 +38,8 @@ public class Main {
 	   }
 
 	/*
-	 * Code for running netstat -rn' from within class but can be done form terminal
+	 * Code for running netstat -rn' from within class but can be done from terminal
+	 * May remove this later or incorporate into checkOS command
 	 * 
 	   private InetAddress getRouter(String OS) {
 		   String gateway = "";
