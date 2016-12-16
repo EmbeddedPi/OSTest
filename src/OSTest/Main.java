@@ -1,21 +1,22 @@
 package OSTest;
 
-//import java.io.BufferedReader;
-//import java.io.InputStreamReader;
-//import java.net.InetAddress;
-//import java.util.StringTokenizer;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.InetAddress;
+import java.util.StringTokenizer;
 
 public class Main {
 	
-	//private static final String localHost = "127.0.0.1";
-	//private static InetAddress routerIP = null;
-	private static String str;
-	
+	private static final String localHost = "127.0.0.1";
+	private static InetAddress routerIP = null;
+	private static String str;	
 	
 	public static void main() {
 	System.out.println("OSTest is starting");
 	str = checkOS();
 	System.out.println("OS is " + str);
+	routerIP = getRouter(str);
+	System.out.println("Running 'netstat -rn' gives router IP address as " + routerIP);;
 	}
 	
 	private static String checkOS() {
@@ -37,11 +38,7 @@ public class Main {
 	    	}    	
 	   }
 
-	/*
-	 * Code for running netstat -rn' from within class but can be done from terminal
-	 * May remove this later or incorporate into checkOS command
-	 * 
-	   private InetAddress getRouter(String OS) {
+	   private static InetAddress getRouter(String OS) {
 		   String gateway = "";
 		   try {
 			   // Ignore unknown OS case as can't handle
@@ -58,7 +55,7 @@ public class Main {
 					        break;      
 					    line = output.readLine();
 					    }
-					    //getLogger().info("Captured line is '" + line + "'");
+					    //System.out.println("Captured line is '" + line + "'");
 					    StringTokenizer st = new StringTokenizer( line );
 					    // Case for Mac/Linux, 2nd token is gateway
 					    // Solaris will probably fit in here as well
@@ -78,7 +75,7 @@ public class Main {
 					    	// 
 					    	// Example line for debugging a new test case
 					    	// String one = st.nextToken();
-					    	/ getLogger().info("Token 1 is '" + one + "'");
+					    	// System.out.println("Token 1 is '" + one + "'");
 					    	//
 					    	st.nextToken();
 						    gateway = st.nextToken();
@@ -86,12 +83,12 @@ public class Main {
 					    	st.nextToken();    	
 					    } 
 				InetAddress routerIP = InetAddress.getByName(gateway);
-				// getLogger().info("Gateway is set to " + gateway);
+				// System.out.println("Gateway is set to " + gateway);
 				return routerIP;
 		   } catch (Exception e ) { 
 			   System.out.println(e.toString());
 		   } 
 		   return routerIP;
 	   }
-	   */		   
+	   
 }
