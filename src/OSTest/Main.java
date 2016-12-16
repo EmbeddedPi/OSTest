@@ -9,7 +9,9 @@ public class Main {
 	
 	private static final String localHost = "127.0.0.1";
 	private static InetAddress routerIP = null;
-	private static String str;	
+	private static String str;
+	
+	
 	
 	public static void main() {
 	System.out.println("OSTest is starting");
