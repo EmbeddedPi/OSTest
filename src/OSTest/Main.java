@@ -31,6 +31,14 @@ public class Main {
 	    	} else if (name.contains("mac")) {
 	    		System.out.println("This is a type of Mac OS");
 	    		return "Mac";
+	    	// Currently untested
+	    	} else if (name.contains("sunos")) {
+	    		System.out.println("This is a type of Solsris");
+	    		return "Solaris";	    	
+	    	// Currently untested
+			} else if (name.contains("bsd")) {
+		    		System.out.println("This is a type of FreeBSD");
+		    		return "FreeBSD";    		
 	    	} else {
 	    		System.out.println(name + " is a new operating system.");
 	    		System.out.println("Try running 'netstat -rn'");
@@ -58,8 +66,8 @@ public class Main {
 					    //System.out.println("Captured line is '" + line + "'");
 					    StringTokenizer st = new StringTokenizer( line );
 					    // Case for Mac/Linux, 2nd token is gateway
-					    // Solaris will probably fit in here as well
-					    if (OS.equals("Mac") || OS.equals("Linux")) { 
+					    // Test Solaris and FreeBSD versions
+					    if (OS.equals("Mac") || OS.equals("Linux") || OS.equals("Solaris") || OS.equals("FreeBSD")) { 
 					    	st.nextToken();
 					    	gateway = st.nextToken();
 					    	st.nextToken();
