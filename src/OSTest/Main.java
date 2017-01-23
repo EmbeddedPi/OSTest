@@ -23,21 +23,21 @@ public class Main {
 	    	String name = System.getProperty("os.name").toLowerCase();
     		System.out.println("os.name is " + name);	    	
 	    	if (name.contains("windows")) {
-	    		System.out.println("This is a type of Windows");
+	    		System.out.println("This is a type of Windows.");
 	    		return "Windows";
 	    	} else if (name.contains("linux")) {
-	    		System.out.println("This is a type of Linux");
+	    		System.out.println("This is a type of Linux.");
 	    		return "Linux";
 	    	} else if (name.contains("mac")) {
-	    		System.out.println("This is a type of Mac OS");
+	    		System.out.println("This is a type of Mac OS.");
 	    		return "Mac";
 	    	// Currently untested
 	    	} else if (name.contains("sunos")) {
-	    		System.out.println("This is a type of Solaris");
+	    		System.out.println("This is a type of Solaris.");
 	    		return "Solaris";	    	
 	    	// Currently untested
 			} else if (name.contains("bsd")) {
-		    		System.out.println("This is a type of FreeBSD");
+		    		System.out.println("This is a type of FreeBSD.");
 		    		return "FreeBSD";    		
 	    	} else {
 	    		System.out.println(name + " is a new operating system.");
