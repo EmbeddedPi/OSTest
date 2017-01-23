@@ -33,7 +33,7 @@ public class Main {
 	    		return "Mac";
 	    	// Currently untested
 	    	} else if (name.contains("sunos")) {
-	    		System.out.println("This is a type of Solsris");
+	    		System.out.println("This is a type of Solaris");
 	    		return "Solaris";	    	
 	    	// Currently untested
 			} else if (name.contains("bsd")) {
